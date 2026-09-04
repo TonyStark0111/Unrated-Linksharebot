@@ -10,16 +10,16 @@ load_dotenv()
 
 # Recommended
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
-APP_ID = int(os.environ.get("APP_ID", os.environ.get("API_ID", "0")) or "0")
-API_HASH = os.environ.get("API_HASH", "")
+APP_ID = int(os.environ.get("APP_ID", os.environ.get("API_ID", "30128415")) or "0")
+API_HASH = os.environ.get("API_HASH", "7e02885160c39ed21e7b2a76ad625dd2")
 
 # Main
-OWNER_ID = int(os.environ.get("OWNER_ID", "0") or "0")
+OWNER_ID = int(os.environ.get("OWNER_ID", "8365451390") or "0")
 PORT = int(os.environ.get("PORT", "8080") or "8080")
 
 # Database
 DB_URI = os.environ.get("DB_URI", os.environ.get("DB_URL", os.environ.get("DATABASE_URL", "")))
-DB_NAME = os.environ.get("DB_NAME", "Unrated-LinkShare-Bot")
+DB_NAME = os.environ.get("DB_NAME", "LinkShare")
 
 #Auto approve 
 id_pattern = re.compile(r'^.\d+$')
@@ -32,26 +32,26 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "40"))
 #--- ---- ---- --- --- --- - -- -  - - - - - - - - - - - --  - -
 
 # Start pic
-START_PIC = os.environ.get("START_PIC", "https://graph.org/file/7228e9fe7ebf6145cca11-38b598b785ee91950b.jpg")
-START_IMG = os.environ.get("START_IMG", "https://graph.org/file/7228e9fe7ebf6145cca11-38b598b785ee91950b.jpg")
+START_PIC = os.environ.get("START_PIC", "https://ibb.co/DHqBS4V7")
+START_IMG = os.environ.get("START_IMG", "https://ibb.co/DHqBS4V7")
 # Messages
 START_MSG = os.environ.get("START_MSG", "<b>👋 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴀᴅᴠᴀɴᴄᴇᴅ ʟɪɴᴋs sʜᴀʀɪɴɢ ʙᴏᴛ!</b>\n\n<blockquote><b>ᴛʜɪs ʙᴏᴛ ɪs ᴀɴ ᴇxᴄʟᴜsɪᴠᴇ ɢᴀᴛᴇᴡᴀʏ ғᴏʀ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ ᴛᴏ ᴀᴄᴄᴇss ᴄᴏɴᴛᴇɴᴛ sᴇᴄᴜʀᴇʟʏ. ᴘʟᴇᴀsᴇ ᴜsᴇ ᴛʜᴇ ʟɪɴᴋs ᴘʀᴏᴠɪᴅᴇᴅ ɪɴ ᴛʜᴇ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇs.</b></blockquote>\n\n<b>• 💠 ᴛʜɪs ɪs ᴀ ᴘʀɪᴠᴀᴛᴇʟʏ ᴍᴀɴᴀɢᴇᴅ sʏsᴛᴇᴍ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ᴏᴜʀ ᴄᴏɴᴛᴇɴᴛ ғʀᴏᴍ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs.</b>")
-HELP = os.environ.get("HELP_MESSAGE", "<b>›› ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟs:\n<blockquote>╭━━━━━━━━━━━━━━━━━━━━━\n├›› ᴜᴘᴅᴀᴛᴇs: @Unrated-Coder\n├›› sᴜᴘᴘᴏʀᴛ: @Unrated-Coder\n├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @Unrated_Coder\n╰━━━━━━━━━━━━━━━━━━━━━</blockquote></b>")
-ABOUT = os.environ.get("ABOUT_MESSAGE", "<b>›› ᴄᴏᴍᴍᴜɴɪᴛʏ: @Unrated_Coder</b>\n<blockquote><b>╭━━━━━━━━━━━━━━━━━━━━━\n├›› ʟᴀɴɢᴜᴀɢᴇ: <a href='https://docs.python.org/3'>Pʏᴛʜᴏɴ 3.10</a>\n├›› ʟɪʙʀᴀʀʏ: <a href='https://www.mongodb.com/docs/'>Pʏʀᴏɢʀᴀᴍ ᴠ2</a>\n├›› ᴅᴀᴛᴀʙᴀsᴇ: <a href='https://www.mongodb.com/docs/'>Mᴏɴɢᴏ ᴅʙ</a>\n├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @Unrated_Coder\n╰━━━━━━━━━━━━━━━━━━━━━</b></blockquote>")
+HELP = os.environ.get("HELP_MESSAGE", "<b>›› ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟs:\n<blockquote>╭━━━━━━━━━━━━━━━━━━━━━\n├›› ᴜᴘᴅᴀᴛᴇs: @Unrateoder\n├›› sᴜᴘᴘᴏʀᴛ: @Unratoder\n├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @Unrateoder\n╰━━━━━━━━━━━━━━━━━━━━━</blockquote></b>")
+ABOUT = os.environ.get("ABOUT_MESSAGE", "<b>›› ᴄᴏᴍᴍᴜɴɪᴛʏ: @Unratedoder</b>\n<blockquote><b>╭━━━━━━━━━━━━━━━━━━━━━\n├›› ʟᴀɴɢᴜᴀɢᴇ: <a href='https://docs.python.org/3'>Pʏᴛʜᴏɴ 3.10</a>\n├›› ʟɪʙʀᴀʀʏ: <a href='https://www.mongodb.com/docs/'>Pʏʀᴏɢʀᴀᴍ ᴠ2</a>\n├›› ᴅᴀᴛᴀʙᴀsᴇ: <a href='https://www.mongodb.com/docs/'>Mᴏɴɢᴏ ᴅʙ</a>\n├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @Unrated_Coder\n╰━━━━━━━━━━━━━━━━━━━━━</b></blockquote>")
 
-ABOUT_TXT = """<b>›› ᴄᴏᴍᴍᴜɴɪᴛʏ: @Unrated_Coder</b>
+ABOUT_TXT = """<b>›› ᴄᴏᴍᴍᴜɴɪᴛʏ: @Unrader</b>
 <blockquote><b>╭━━━━━━━━━━━━━━━━━━━━━
 ├›› ʟᴀɴɢᴜᴀɢᴇ: <a href='https://docs.python.org/3'>Pʏᴛʜᴏɴ 3.10</a>
 ├›› ʟɪʙʀᴀʀʏ: <a href='https://www.mongodb.com/docs/'>Pʏʀᴏɢʀᴀᴍ ᴠ2</a>
 ├›› ᴅᴀᴛᴀʙᴀsᴇ: <a href='https://www.mongodb.com/docs/'>Mᴏɴɢᴏ ᴅʙ</a>
-├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @Unrated_Coder
+├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @Unrateder
 ╰━━━━━━━━━━━━━━━━━━━━━</b></blockquote>""" 
 
 CHANNELS_TXT = """<b>›› ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟs:
 <blockquote>╭━━━━━━━━━━━━━━━━━━━━━
-├›› ᴜᴘᴅᴀᴛᴇs: @Unrated_Coder
-├›› sᴜᴘᴘᴏʀᴛ: @Unrated_Coder
-├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @Unrated_Coder
+├›› ᴜᴘᴅᴀᴛᴇs: @Unrateer
+├›› sᴜᴘᴘᴏʀᴛ: @Unrateer
+├›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @Unratder
 ╰━━━━━━━━━━━━━━━━━━━━━</blockquote></b>"""
 
 #--- ---- ---- --- --- --- - -- -  - - - - - - - - - - - --  - -
@@ -62,12 +62,12 @@ USER_ROAST = "<b>⚠️ ғᴜᴄᴋ ʏᴏᴜ, ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ �
 
 # Logging
 LOG_FILE_NAME = "links-sharingbot.txt"
-DATABASE_CHANNEL = int(os.environ.get("DATABASE_CHANNEL", "0") or "0") # Channel where user links are stored
+DATABASE_CHANNEL = int(os.environ.get("DATABASE_CHANNEL", "-1004456152761") or "0") # Channel where user links are stored
 #--- ---- ---- --- --- --- - -- -  - - - - - - - - - - - --  - -
 
 try:
     ADMINS = []
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "8365451390 8741514787").split()):
         ADMINS.append(int(x))
 except ValueError:
     raise Exception("Your Admins list does not contain valid integers.")
