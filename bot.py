@@ -1,16 +1,22 @@
-# Upgraded by @Unrated_Coder from Telegram
+# bot.py – fixed version
+
 import asyncio
 import sys
+
+# ===== FIX: Create a default event loop before importing pyrogram =====
+try:
+    asyncio.get_running_loop()
+except RuntimeError:
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+# =====================================================================
+
 from datetime import datetime
 from pyrogram import Client
 from pyrogram.enums import ParseMode
 from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, PORT, OWNER_ID
 from webserver import web_server
 from aiohttp import web
-
-name = """
-Links Sharing Started
-"""
 
 class Bot(Client):
     def __init__(self):
@@ -29,7 +35,6 @@ class Bot(Client):
             self.LOGGER(__name__).critical("TG_BOT_TOKEN, API_HASH or APP_ID is missing!")
             sys.exit(1)
 
-        # Web-response (Start before bot to satisfy health checks)
         try:
             app = web.AppRunner(await web_server())
             await app.setup()
@@ -44,7 +49,6 @@ class Bot(Client):
         self.uptime = datetime.now()
         self.username = usr_bot_me.username
 
-        # Notify owner of bot restart
         if OWNER_ID:
             try:
                 await asyncio.sleep(2)
@@ -59,7 +63,6 @@ class Bot(Client):
         self.set_parse_mode(ParseMode.HTML)
         self.LOGGER(__name__).info(f"Bot Started as @{self.username}")
         self.LOGGER(__name__).info("Bot Running..!")
-
 
     async def stop(self, *args):
         await super().stop()
