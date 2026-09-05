@@ -62,10 +62,9 @@ async def autoapprove(client, message: ChatJoinRequest):
     
     if APPROVED == "on":
         try:
-            # Only keep the Unrated_Coder button, remove the chat.title invite button
+            invite_link = await client.export_chat_invite_link(chat.id)
             buttons = [
-                [InlineKeyboardButton('• ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs •', url='https://t.me/Unrated_Coder')]
-                # Removed: [InlineKeyboardButton(f'• ᴊᴏɪɴ {chat.title} •', url=invite_link)]
+                [InlineKeyboardButton('• ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs •', url='https://t.me/Unrader')]
             ]
             markup = InlineKeyboardMarkup(buttons)
             caption = TEXT.format(mention=user.mention, title=chat.title)
