@@ -279,8 +279,8 @@ async def check_sub_callback(client: Client, callback_query: CallbackQuery):
 WAIT_MSG = "<b>Processing...</b>"
 
 REPLY_ERROR = """Use this command as a reply to a Telegram message with spam."""
-                                            
-                                            @Client.on_message(filters.command('status') & filters.private & is_owner_or_admin)
+
+@Client.on_message(filters.command('status') & filters.private & is_owner_or_admin)
 async def info(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("• Close •", callback_data="close")]])
     
