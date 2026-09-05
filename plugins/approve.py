@@ -64,7 +64,8 @@ async def autoapprove(client, message: ChatJoinRequest):
         try:
             invite_link = await client.export_chat_invite_link(chat.id)
             buttons = [
-                [InlineKeyboardButton('• ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs •', url='https://t.me/Unrader')]
+                [InlineKeyboardButton('• ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs •', url='https://t.me/Unroder')],
+                [InlineKeyboardButton(f'• ᴊᴏɪɴ {chat.title} •', url=invite_link)]
             ]
             markup = InlineKeyboardMarkup(buttons)
             caption = TEXT.format(mention=user.mention, title=chat.title)
